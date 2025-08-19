@@ -1,9 +1,9 @@
 package ch.tbz.leon_michel;
 
+import ch.tbz.leon_michel.guess_number.Game;
+
 public class Main {
     public static void main(String[] args) {
-        for (int i = 1; i <= 5; i++) {
-            System.out.println("i = " + i);
-        }
+        Game game = new Game(0,10);
     }
 }
