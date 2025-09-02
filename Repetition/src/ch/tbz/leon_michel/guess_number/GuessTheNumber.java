@@ -33,7 +33,7 @@ public class GuessTheNumber {
     }
 
     private void printInputBanner(){
-        System.out.println("Type a number between " + min + " and " + max + ":");
+        System.out.print("Type a number between " + min + " and " + max + ":");
     }
 
     public void  playRound(){
