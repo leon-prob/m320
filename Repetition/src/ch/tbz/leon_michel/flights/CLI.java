@@ -80,9 +80,6 @@ public class CLI {
         schedule.getFlights().add(flight3);
     }
 
-    /**
-     * Prints the main menu options to the console.
-     */
     private void printMainMenu() {
         System.out.println("\n✈️ --- Flight Management System --- ✈️");
         System.out.println("1. Register for a flight");
@@ -150,21 +147,11 @@ public class CLI {
                 selectedFlight.getDeparture().format(formatter));
     }
 
-    /**
-     * Prompts the user to enter their first name and returns the input.
-     *
-     * @return The first name entered by the user.
-     */
     private String getFirstNameFromUser(){
         System.out.print("Enter your first name: ");
         return scanner.nextLine();
     }
 
-    /**
-     * Prompts the user to enter their last name and returns the input.
-     *
-     * @return The last name entered by the user.
-     */
     private String getLastNameFromUser(){
         System.out.print("Enter your last name: ");
         return scanner.nextLine();
