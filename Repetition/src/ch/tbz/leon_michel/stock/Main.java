@@ -49,7 +49,15 @@ public class Main {
 
                 String actualStockName = findActualStockName(portfolio, stockNameInput);
 
-                double price = portfolio.getStockPrice(actualStockName, exchangeInput.toLowerCase());
+                StockExchange stockExchange;
+
+                switch(exchangeInput){
+                    case "zurich" -> stockExchange = new ZurichStockExchange();
+                    case "london" -> stockExchange = new LondonStockExchange();
+                    default -> stockExchange = new NewYorkStockExchange();
+                }
+
+                double price = portfolio.getStockPrice(actualStockName, stockExchange);
 
                 System.out.printf("-> The price of %s on the %s exchange is %.2f%n",
                         actualStockName, exchangeInput.toLowerCase(), price);

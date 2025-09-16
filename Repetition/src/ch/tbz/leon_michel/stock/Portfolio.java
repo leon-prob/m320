@@ -29,20 +29,10 @@ public class Portfolio {
         throw new Exception("Not valid stock name!");
     }
 
-    public double getStockPrice(String stockName, String stockExchangePlace) throws Exception {
+    public double getStockPrice(String stockName,
+                                StockExchange stockExchange) throws Exception {
         Share share = getShareByStockName(stockName);
         assert share != null;
-        switch (stockExchangePlace) {
-            case "zurich" -> {
-                return zurichStockExchange.getPrice(share);
-            }
-            case "london" -> {
-                return londonStockExchange.getPrice(share);
-            }
-            case "new york" -> {
-                return newYorkStockExchange.getPrice(share);
-            }
-            default -> throw new Exception("Not valid stock exchange!");
-        }
+        return stockExchange.getPrice(share);
     }
 }
