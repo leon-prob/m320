@@ -1,0 +1,64 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.17 Chrome/128.0.6613.36 Electron/32.0.1 Safari/537.36" version="24.7.17">
+  <diagram id="h2fFq8bC5gVjK3pLwXy" name="Page-1">
+    <mxGraphModel dx="1194" dy="657" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" value="&lt;b&gt;User&lt;/b&gt;&lt;br&gt;&lt;hr&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- name: String&lt;br&gt;- birthDate: Date&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- email : String&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- password : String&lt;/p&gt;&lt;hr&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ getName(): String&lt;br&gt;+ setName(String): void&lt;br&gt;&lt;br&gt;&lt;/p&gt;" style="html=1;whiteSpace=wrap;rounded=1;align=center;verticalAlign=top;labelBackgroundColor=black;uml=1;strokeColor=#ffffff;fillColor=#000000;" parent="1" vertex="1">
+          <mxGeometry y="203" width="160" height="157" as="geometry" />
+        </mxCell>
+        <mxCell id="4" value="&lt;div&gt;&lt;b&gt;Car&lt;/b&gt;&lt;br&gt;&lt;hr&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- carId: String&lt;br&gt;- make: String&lt;br&gt;- model: String&lt;br&gt;- year: Integer&lt;br&gt;- category: CarCategory&lt;br&gt;- maxLeaseDays: Integer&lt;br&gt;- dailyPrice: Double&lt;br&gt;- minimumDriverAge: Integer&lt;/p&gt;&lt;/div&gt;" style="html=1;whiteSpace=wrap;rounded=1;align=center;verticalAlign=top;labelBackgroundColor=black;uml=1;strokeColor=#ffffff;fillColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="610" y="190" width="190" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="5" value="&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;font-size: 10.6667px;&quot;&gt;&lt;i&gt;enum&lt;/i&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;b style=&quot;font-size: 12px;&quot;&gt;CarCategory&lt;/b&gt;&lt;br&gt;&lt;/div&gt;&lt;hr&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;SEDAN&lt;br&gt;SUV&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;SPORT&lt;br&gt;TRUCK&lt;br&gt;COUPE&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;COMBI&lt;/p&gt;" style="html=1;whiteSpace=wrap;rounded=1;align=center;verticalAlign=top;labelBackgroundColor=black;uml=1;strokeColor=#ffffff;fillColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="860" y="240" width="100" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="6" value="&lt;div&gt;&lt;b&gt;LeaseContract&lt;/b&gt;&lt;br&gt;&lt;hr&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- contractId: String&lt;br&gt;- startDate: Date&lt;br&gt;- endDate: Date&lt;br&gt;- totalPrice: Double&lt;br&gt;- status: String&lt;br&gt;- user: User&lt;br&gt;- car: Car&lt;/p&gt;&lt;/div&gt;" style="html=1;whiteSpace=wrap;rounded=1;align=center;verticalAlign=top;labelBackgroundColor=black;uml=1;strokeColor=#ffffff;fillColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="390" y="490" width="200" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="8" value="1" style="edgeStyle=orthogonalEdgeStyle;curved=0;html=1;endArrow=open;endFill=0;dashed=0;startArrow=none;exitX=0.5;exitY=0;exitDx=0;exitDy=0;labelBackgroundColor=white;" parent="1" source="6" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="480" y="590" as="sourcePoint" />
+            <mxPoint x="80" y="360" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="490" y="400" />
+              <mxPoint x="80" y="400" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9" value="*" style="html=1;whiteSpace=wrap;rounded=1;align=center;verticalAlign=top;labelBackgroundColor=black;uml=1;strokeColor=#ffffff;fillColor=#000000;exitX=0.61;exitY=0.007;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="6" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="510" y="480" as="sourcePoint" />
+            <mxPoint x="705" y="360" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="510" y="400" />
+              <mxPoint x="705" y="400" />
+              <mxPoint x="705" y="360" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="10" value="*" style="endArrow=open;html=1;endFill=0;dashed=0;startArrow=none;labelBackgroundColor=white;" parent="1" source="4" target="5" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="800" y="285" as="sourcePoint" />
+            <mxPoint x="840" y="295" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="11" value="&lt;div&gt;&lt;b&gt;Garage&lt;/b&gt;&lt;br&gt;&lt;hr&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- cars: List&amp;lt;Car&amp;gt;&lt;br&gt;- contracts: List&amp;lt;LeaseContract&amp;gt;&lt;br&gt;- bannedUsers: List&amp;lt;User&amp;gt;&lt;/p&gt;&lt;/div&gt;" style="html=1;whiteSpace=wrap;rounded=1;align=center;verticalAlign=top;labelBackgroundColor=black;uml=1;strokeColor=#ffffff;fillColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="200" y="140" width="190" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="16" value="" style="endArrow=none;html=1;endFill=0;dashed=0;fontFamily=Arial;fontSize=11;labelBackgroundColor=white;labelPosition=right;verticalLabelPosition=middle;endArrow=block;endFill=1;" parent="1" source="11" target="4" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="460" y="90" as="sourcePoint" />
+            <mxPoint x="705" y="210" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="17" value="" style="endArrow=none;html=1;endFill=0;dashed=0;fontFamily=Arial;fontSize=11;labelBackgroundColor=white;labelPosition=right;verticalLabelPosition=middle;endArrow=block;endFill=1;" parent="1" source="11" target="6" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="460" y="90" as="sourcePoint" />
+            <mxPoint x="480" y="440" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,169 @@
+openapi: 3.0.1
+info:
+  title: API Documentation Frühlingsferien-Projekt
+  version: v1
+servers:
+- url: http://localhost:8080
+  description: Generated server url
+paths:
+  /v1/api/loan/{id}:
+    get:
+      summary: gets the loan contract of the given id
+      tags:
+      - loan-controller
+      operationId: getContractById
+      parameters: []
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: "#/components/schemas/LoanContract"
+    put:
+      tags:
+      - loan-controller
+      operationId: updateLoanContractById
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+          format: uuid
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/LoanContract"
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: "#/components/schemas/LoanContract"
+    delete:
+      tags:
+      - loan-controller
+      operationId: deleteLoanContractById
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+          format: uuid
+      responses:
+        "200":
+          description: OK
+  /v1/api/loan/:
+    post:
+      tags:
+      - loan-controller
+      operationId: createLoanContract
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/LoanContract"
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: "#/components/schemas/LoanContract"
+  /v1/api/loan:
+    get:
+      tags:
+      - loan-controller
+      operationId: getAllContracts
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/LoanContract"
+components:
+  schemas:
+    LoanContract:
+      required:
+      - customer
+      - endDate
+      - media
+      - startDate
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        startDate:
+          type: string
+          format: date
+        endDate:
+          type: string
+          format: date
+        loanStatus:
+          type: string
+          enum:
+          - OPEN
+          - COMPLETED
+          - LATE
+        customer:
+          $ref: "#/components/schemas/Person"
+        media:
+          $ref: "#/components/schemas/Media"
+    Media:
+      required:
+      - releaseDate
+      - title
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        title:
+          type: string
+        requiredAge:
+          type: integer
+          format: int32
+        maximumRentalPeriodInDays:
+          type: integer
+          format: int32
+        releaseDate:
+          type: string
+          format: date
+        hasAward:
+          type: boolean
+        description:
+          type: string
+        creator:
+          type: string
+    Person:
+      required:
+      - birthDate
+      - firstName
+      - lastName
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        firstName:
+          type: string
+        lastName:
+          type: string
+        birthDate:
+          type: string
+          format: date
+        banned:
+          type: boolean
+        age:
+          type: integer
+          format: int32
