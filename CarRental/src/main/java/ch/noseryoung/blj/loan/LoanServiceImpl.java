@@ -4,8 +4,8 @@ import ch.noseryoung.blj.exceptions.loanExceptions.*;
 import ch.noseryoung.blj.exceptions.objectNotFound.LoanContractNotFound;
 import ch.noseryoung.blj.car.Car;
 import ch.noseryoung.blj.car.CarService;
-import ch.noseryoung.blj.person.Person;
-import ch.noseryoung.blj.person.PersonService;
+import ch.noseryoung.blj.login.user.User;
+import ch.noseryoung.blj.login.user.UserService;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
@@ -23,12 +23,12 @@ import java.util.UUID;
 public class LoanServiceImpl implements LoanService{
     private final LoanRepository loanRepository;
     private final CarService mediaService;
-    private final PersonService personService;
+    private final UserService userService;
 
-    public LoanServiceImpl(LoanRepository loanRepository, CarService mediaService, PersonService personService) {
+    public LoanServiceImpl(LoanRepository loanRepository, CarService mediaService, UserService userService) {
         this.loanRepository = loanRepository;
         this.mediaService = mediaService;
-        this.personService = personService;
+        this.userService = userService;
     }
 
     @Override
@@ -48,9 +48,9 @@ public class LoanServiceImpl implements LoanService{
     }
 
     @Override
-    public LoanContract createLoan(UUID personId, UUID mediaId, LocalDate startDate, LocalDate endDate, LoanStatus status) {
+    public LoanContract createLoan(UUID userId, UUID mediaId, LocalDate startDate, LocalDate endDate, LoanStatus status) {
         Car loaningCar = mediaService.getCarById(mediaId);
-        Person loaningPerson = personService.getPersonById(personId);
+        User loaningUser = userService.getUserById(userId);
 
         if(LocalDate.now().isBefore(endDate)){
             isCarAvailableNow(loaningCar);
@@ -58,12 +58,12 @@ public class LoanServiceImpl implements LoanService{
             isCarAvailableInPeriod(loaningCar, startDate, endDate, status);
         }
 
-        isPersonOldEnough(loaningCar, loaningPerson);
-        isPersonCustomer(loaningPerson);
+        isUserOldEnough(loaningCar, loaningUser);
+        isUserCustomer(loaningUser);
         isValidStatus(status, endDate);
         datesAreInMaxLimitOfCarToLoan(loaningCar, startDate, endDate);
         log.info("New Loan created");
-        return new LoanContract(startDate, endDate, status, loaningPerson, loaningCar);
+        return new LoanContract(startDate, endDate, status, loaningUser, loaningCar);
     }
 
     private void isValidStatus(LoanStatus status, LocalDate endDate){
@@ -72,9 +72,9 @@ public class LoanServiceImpl implements LoanService{
         }
     }
 
-    private void isPersonCustomer(Person person){
-        if(person.isBanned()){
-            throw new BannedPersonException();
+    private void isUserCustomer(User user){
+        if(user.isBanned()){
+            throw new BannedUserException();
         }
     }
 
@@ -102,9 +102,9 @@ public class LoanServiceImpl implements LoanService{
         }
     }
 
-    private void isPersonOldEnough(Car media, Person person){
-        if(media.getRequiredAge() > person.getAge()){
-            throw new PersonTooYoungToLoan();
+    private void isUserOldEnough(Car media, User user){
+        if(media.getRequiredAge() > user.getAge()){
+            throw new UserTooYoungToLoan();
         }
     }
 

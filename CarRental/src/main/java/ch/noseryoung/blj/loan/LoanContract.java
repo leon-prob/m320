@@ -1,7 +1,7 @@
 package ch.noseryoung.blj.loan;
 
 import ch.noseryoung.blj.car.Car;
-import ch.noseryoung.blj.person.Person;
+import ch.noseryoung.blj.login.user.User;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 
@@ -20,7 +20,8 @@ import java.util.UUID;
 
 public class LoanContract {
 
-    public LoanContract(LocalDate startDate, LocalDate endDate, LoanStatus status, Person customer, Car car){
+    public LoanContract(LocalDate startDate, LocalDate endDate, LoanStatus status,
+                        User customer, Car car){
         id = UUID.randomUUID();
         this.startDate = startDate;
         this.endDate = endDate;
@@ -45,7 +46,7 @@ public class LoanContract {
     @ManyToOne
     @JoinColumn(name = "id_customer", referencedColumnName = "id")
     @NotNull
-    private Person customer;
+    private User customer;
 
     @ManyToOne
     @JoinColumn(name = "id_car", referencedColumnName = "id")

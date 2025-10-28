@@ -3,7 +3,7 @@ package ch.noseryoung.blj.garage;
 import ch.noseryoung.blj.loan.LoanContract;
 import ch.noseryoung.blj.loan.LoanStatus;
 import ch.noseryoung.blj.car.Car;
-import ch.noseryoung.blj.person.Person;
+import ch.noseryoung.blj.login.user.User;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
@@ -18,21 +18,20 @@ public interface CarGarageService {
 
     CarGarage addGarage();
 
-    Set<Person> getAllCustomers(long library_id);
-    List<Car> getCarCollection(long library_id);
-    Set<Person> getAllBannedPeople(long library_id);
-    List<LoanContract> getAllContracts(long library_id);
+    Set<User> getAllCustomers(long garage_id);
+    List<Car> getCarCollection(long garage_id);
+    Set<User> getAllBannedPeople(long garage_id);
+    List<LoanContract> getAllContracts(long garage_id);
+    Car getCarById(long garage_id, UUID carId);
 
-    Person createPerson(long library_id, Person person);
+    LoanContract createContract(long garage_id, UUID personId, UUID mediaId, LocalDate startDate, LocalDate endDate, LoanStatus status) throws Exception;
 
-    LoanContract createContract(long library_id, UUID personId, UUID mediaId, LocalDate startDate, LocalDate endDate, LoanStatus status) throws Exception;
+    Car createCar(long garage_id, Car media);
 
-    Car createCar(long library_id, Car media);
+    Car updateCar(long garageId, UUID carId, Car newCar);
 
-    void deleteLoan(long library_id, UUID id);
+    void deleteLoan(long garage_id, UUID id);
 
-    void deleteCar(long library_id, UUID id);
-
-    void deletePerson(long library_id, UUID id);
+    void deleteCar(long garage_id, UUID id);
 
 }

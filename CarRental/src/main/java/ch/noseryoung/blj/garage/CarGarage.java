@@ -2,7 +2,7 @@ package ch.noseryoung.blj.garage;
 
 import ch.noseryoung.blj.loan.LoanContract;
 import ch.noseryoung.blj.car.Car;
-import ch.noseryoung.blj.person.Person;
+import ch.noseryoung.blj.login.user.User;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -31,7 +31,7 @@ public class CarGarage {
 
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
     @JoinColumn(name = "id_car_garage")
-    private List<Person> personSet = new ArrayList<>();
+    private List<User> personSet = new ArrayList<>();
 
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
     @JoinColumn(name = "id_car_garage")

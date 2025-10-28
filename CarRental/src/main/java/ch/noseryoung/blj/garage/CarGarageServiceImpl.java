@@ -6,8 +6,8 @@ import ch.noseryoung.blj.loan.LoanService;
 import ch.noseryoung.blj.loan.LoanStatus;
 import ch.noseryoung.blj.car.Car;
 import ch.noseryoung.blj.car.CarService;
-import ch.noseryoung.blj.person.Person;
-import ch.noseryoung.blj.person.PersonService;
+import ch.noseryoung.blj.login.user.User;
+import ch.noseryoung.blj.login.user.UserService;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
@@ -29,13 +29,13 @@ public class CarGarageServiceImpl implements CarGarageService{
 
     private final LoanService loanService;
 
-    private final PersonService personService;
+    private final UserService personService;
 
     private final CarService carService;
     private final CarGarage carGarage;
 
 
-    public CarGarageServiceImpl(CarGarageRepository carGarageRepository, LoanService loanService, PersonService personService, CarService carService, CarGarage carGarage) {
+    public CarGarageServiceImpl(CarGarageRepository carGarageRepository, LoanService loanService, UserService personService, CarService carService, CarGarage carGarage) {
         this.carGarageRepository = carGarageRepository;
         this.loanService = loanService;
         this.personService = personService;
@@ -54,8 +54,9 @@ public class CarGarageServiceImpl implements CarGarageService{
     }
 
     @Override
-    public Set<Person> getAllCustomers(long library_id) {
-        return personService.getCustomers();
+    public Set<User> getAllCustomers(long library_id) {
+        CarGarage garage = carGarageRepository.findById(library_id).orElseThrow(GarageNotFoundException::new);
+        return (Set<User>) garage.getPersonSet().stream().filter(user -> !user.isBanned());
     }
 
     @Override
@@ -64,8 +65,9 @@ public class CarGarageServiceImpl implements CarGarageService{
     }
 
     @Override
-    public Set<Person> getAllBannedPeople(long library_id) {
-        return personService.getBannedCustomers();
+    public Set<User> getAllBannedPeople(long library_id) {
+        CarGarage garage = carGarageRepository.findById(library_id).orElseThrow(GarageNotFoundException::new);
+        return (Set<User>) garage.getPersonSet().stream().filter(user -> user.isBanned());
     }
 
     @Override
@@ -74,9 +76,8 @@ public class CarGarageServiceImpl implements CarGarageService{
     }
 
     @Override
-    public Person createPerson(long library_id, Person person) {
-        carGarageRepository.findById(library_id).orElseThrow(GarageNotFoundException::new).getPersonSet().add(personService.createPerson(person));
-        return carGarageRepository.findById(library_id).orElseThrow(GarageNotFoundException::new).getPersonSet().getLast();
+    public Car getCarById(long garage_id, UUID carId) {
+        return carService.getCarById(carId);
     }
 
     @Override
@@ -92,6 +93,11 @@ public class CarGarageServiceImpl implements CarGarageService{
         mediaCollection.add(carService.createCar(media));
         return carGarageRepository.findById(library_id).orElseThrow(GarageNotFoundException::new).getCars().getLast();
     }
+    @Override
+    public Car updateCar(long garageID, UUID carId, Car newCar){
+        getCarCollection(garageID).add(carService.updateCar(carId, newCar));
+        return carService.updateCar(carId, newCar);
+    }
 
     @Override
     public void deleteLoan(long library_id, UUID id) {
@@ -103,11 +109,5 @@ public class CarGarageServiceImpl implements CarGarageService{
     public void deleteCar(long library_id, UUID id) {
         carGarageRepository.findById(library_id).orElseThrow(GarageNotFoundException::new)
                 .getCars().removeIf(media -> media.getId() == id);
-    }
-
-    @Override
-    public void deletePerson(long library_id, UUID id) {
-        carGarageRepository.findById(library_id).orElseThrow(GarageNotFoundException::new)
-                .getPersonSet().removeIf(person -> person.getId() == id);
     }
 }

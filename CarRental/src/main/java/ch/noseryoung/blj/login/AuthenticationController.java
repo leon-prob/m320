@@ -1,0 +1,34 @@
+package ch.noseryoung.blj.login;
+
+import lombok.RequiredArgsConstructor;
+import lombok.extern.log4j.Log4j2;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("/v1/api/auth")
+@RequiredArgsConstructor
+@Log4j2
+public class AuthenticationController {
+
+    private final AuthenticationService service;
+
+    @PostMapping("/register")
+    public ResponseEntity<AuthenticationResponse> register(
+            @RequestBody RegisterRequest request
+    ) {
+        log.info("Arrived to Endpoint");
+        return ResponseEntity.ok(service.register(request));
+    }
+
+    @PostMapping("/authenticate")
+    public ResponseEntity<AuthenticationResponse> authenticate(
+            @RequestBody AuthenticationRequest request
+    ) {
+        log.info("Arrived to Endpoint");
+        return ResponseEntity.ok(service.authenticate(request));
+    }
+}
