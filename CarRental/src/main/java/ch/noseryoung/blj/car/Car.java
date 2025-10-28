@@ -22,17 +22,18 @@ public class Car {
     private UUID id;
 
     @NotNull @NotEmpty @NotBlank
-    private String title;
+    private String brand;
+    @NotNull @NotEmpty @NotBlank
+    private String model;
     @PositiveOrZero
     private int requiredAge;
     @Positive
     private int maximumRentalPeriodInDays;
-    @NotNull @NotEmpty @NotBlank
-    private String description;
-    @NotNull @NotEmpty @NotBlank
-    private String creator;
+    @Enumerated(EnumType.STRING)
+    private CarCategory category;
     @NotNull
     private LocalDate releaseDate;
-    private boolean hasAward;
+    @Positive
+    private double pricePerDay;
 
 }

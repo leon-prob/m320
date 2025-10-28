@@ -39,6 +39,18 @@ public class CarServiceImpl implements CarService{
         return carRepository.save(Car);
     }
 
+    public Car updateCar(UUID carId, Car newCar){
+        Car updatingCar = getCarById(carId);
+        updatingCar.setBrand(newCar.getBrand());
+        updatingCar.setCategory(newCar.getCategory());
+        updatingCar.setMaximumRentalPeriodInDays(newCar.getMaximumRentalPeriodInDays());
+        updatingCar.setModel(newCar.getModel());
+        updatingCar.setPricePerDay(newCar.getPricePerDay());
+        updatingCar.setReleaseDate(newCar.getReleaseDate());
+        updatingCar.setRequiredAge(newCar.getRequiredAge());
+        return carRepository.save(updatingCar);
+    }
+
     @Override
     public void deleteCar(UUID id) {
         log.info("Car got deleted");

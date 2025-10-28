@@ -1,4 +1,4 @@
-/*
+
 SET search_path To blj;
 
 -- Create Libraries
@@ -26,24 +26,25 @@ INSERT INTO blj.person VALUES
     ('2001-09-11', true, 2, '53819c97-672b-423e-9b13-c2b5717a79e4',
       'Ahmed', 'Ali');
 
--- Create Media
+/*
+-- Create Cars
 
-INSERT INTO blj.book VALUES
+INSERT INTO blj.car VALUES
   (300,false, true,  43,
    '2010-02-23', 12, 1, '18b12fb2-1aa2-409d-b155-7e876e8f9ba8', 'Joel',
    'It is a murder story' ,'THRILLER','The Knife');
 
-INSERT INTO blj.cd VALUES
+INSERT INTO blj.car VALUES
     (true, 72.5, 18, '2006-01-12', 10,
      1, '16ba7cff-280c-4047-b016-950df8f6084b', 'IGOR', 'The Creator',
      'eyerything', 'HIPHOP','The world');
 
-INSERT INTO blj.game VALUES
+INSERT INTO blj.car VALUES
     (false, false, 140, '1992-07-30', 7,
      128, 2,'e9cec32b-3bdc-46c8-89ff-c3b735f2bb2d', 'Steve Jobs',
      'Ohhh iPhone', 'MUSIC', 'iPhone 15 Pro Max');
 
-INSERT INTO blj.game VALUES
+INSERT INTO blj.car VALUES
     (true, true,150,'2014-04-26', 10, 2.4,
      2,'523afcde-ca93-4395-97d4-211b09c11b74', 'Money Maker',
      'Angry kid playing Fortnite', 'SHOOTER', 'The money maker saga');

@@ -1,10 +1,10 @@
-package ch.noseryoung.medialibrary1725;
+package ch.noseryoung.cargarage;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class MediaLibrary1725ApplicationTests {
+class CarRentalApplicationTests {
 
     @Test
     void contextLoads() {
