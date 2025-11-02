@@ -1,7 +1,7 @@
 package ch.noseryoung.blj.login;
 
 
-import ch.noseryoung.blj.exceptions.objectNotFound.UserNotFoundException;
+import ch.noseryoung.blj.exceptions.objectNotFound.PersonNotFoundException;
 import ch.noseryoung.blj.login.user.Role;
 import ch.noseryoung.blj.login.user.User;
 import ch.noseryoung.blj.login.user.UserRepository;
@@ -63,10 +63,10 @@ public class AuthenticationService {
     }
 
     public User getUserByEmail(String email){
-        return repository.findByEmail(email).orElseThrow(() -> new UserNotFoundException());
+        return repository.findByEmail(email).orElseThrow(() -> new PersonNotFoundException(email));
     }
 
     public User findUserById(UUID personId){
-        return repository.findById(personId).orElseThrow(() -> new UserNotFoundException());
+        return repository.findById(personId).orElseThrow(() -> new PersonNotFoundException(personId));
     }
 }
