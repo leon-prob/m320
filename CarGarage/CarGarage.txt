@@ -1,0 +1,13 @@
+Backend for a car garage
+
+must
+
+class car and garage to have at least a catalog
+
+should
+
+user login and exception handling
+
+could
+
+loan contracts to loan car and customer with specific logic behind

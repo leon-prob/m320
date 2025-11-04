@@ -1,0 +1,24 @@
+# docker-compose.yml (Example)
+version: '3.8'
+services:
+  # 1. Database Service
+  postgres:
+    image: postgres:latest
+    container_name: postgres
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: your_password
+    ports:
+      - "5432:5432" # Optional, but good for local debugging
+
+  # 2. Application Service
+  app:
+    build: . # Build your Spring Boot app using a Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      # Use the SERVICE NAME 'postgres' here, which will resolve correctly
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/postgres
+    depends_on:
+      - postgres

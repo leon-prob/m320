@@ -1,0 +1,186 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.17 Chrome/128.0.6613.36 Electron/32.0.1 Safari/537.36" version="24.7.17">
+  <diagram name="Page-1" id="F4cIiTEe6HqlF-Ck_c1d">
+    <mxGraphModel dx="1817" dy="991" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="4xPYINfr6F9CxKkX8cQ9-1" value="Frontend/Client" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="150" height="1376" as="geometry" />
+        </mxCell>
+        <mxCell id="4xPYINfr6F9CxKkX8cQ9-2" value="CarGarage Backend (API)" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;" vertex="1" parent="1">
+          <mxGeometry x="470" y="20" width="196" height="1376" as="geometry" />
+        </mxCell>
+        <mxCell id="4xPYINfr6F9CxKkX8cQ9-3" value="" style="points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0}" vertex="1" parent="4xPYINfr6F9CxKkX8cQ9-2">
+          <mxGeometry x="93" y="109" width="10" height="1172" as="geometry" />
+        </mxCell>
+        <mxCell id="4xPYINfr6F9CxKkX8cQ9-4" value="JWT Auth Middleware" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;" vertex="1" parent="1">
+          <mxGeometry x="716" y="20" width="175" height="1376" as="geometry" />
+        </mxCell>
+        <mxCell id="4xPYINfr6F9CxKkX8cQ9-5" value="" style="points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0}" vertex="1" parent="4xPYINfr6F9CxKkX8cQ9-4">
+          <mxGeometry x="83" y="163" width="10" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="4xPYINfr6F9CxKkX8cQ9-6" value="Loan Contract Service" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;" vertex="1" parent="1">
+          <mxGeometry x="941" y="20" width="173" height="1376" as="geometry" />
+        </mxCell>
+        <mxCell id="4xPYINfr6F9CxKkX8cQ9-7" value="" style="points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0}" vertex="1" parent="4xPYINfr6F9CxKkX8cQ9-6">
+          <mxGeometry x="82" y="271" width="10" height="926" as="geometry" />
+        </mxCell>
+        <mxCell id="4xPYINfr6F9CxKkX8cQ9-8" value="Vehicle Service/DB" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;" vertex="1" parent="1">
+          <mxGeometry x="1285" y="20" width="151" height="1376" as="geometry" />
+        </mxCell>
+        <mxCell id="4xPYINfr6F9CxKkX8cQ9-9" value="" style="points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0}" vertex="1" parent="4xPYINfr6F9CxKkX8cQ9-8">
+          <mxGeometry x="71" y="665" width="10" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="4xPYINfr6F9CxKkX8cQ9-10" value="" style="points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0}" vertex="1" parent="4xPYINfr6F9CxKkX8cQ9-8">
+          <mxGeometry x="71" y="1089" width="10" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="4xPYINfr6F9CxKkX8cQ9-11" value="Customer Service/DB" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;" vertex="1" parent="1">
+          <mxGeometry x="1486" y="20" width="169" height="1376" as="geometry" />
+        </mxCell>
+        <mxCell id="4xPYINfr6F9CxKkX8cQ9-12" value="" style="points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0}" vertex="1" parent="4xPYINfr6F9CxKkX8cQ9-11">
+          <mxGeometry x="80" y="325" width="10" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="4xPYINfr6F9CxKkX8cQ9-13" value="alt" style="shape=umlFrame;dashed=1;pointerEvents=0;dropTarget=0;strokeColor=#B3B3B3;height=20;width=30" vertex="1" parent="1">
+          <mxGeometry x="553" y="843" width="823" height="394" as="geometry" />
+        </mxCell>
+        <mxCell id="4xPYINfr6F9CxKkX8cQ9-14" value="[Vehicle Already on Loan]" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;" vertex="1" parent="4xPYINfr6F9CxKkX8cQ9-13">
+          <mxGeometry x="30" width="793" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="4xPYINfr6F9CxKkX8cQ9-15" value="[Vehicle is Available]" style="shape=line;dashed=1;whiteSpace=wrap;verticalAlign=top;labelPosition=center;verticalLabelPosition=middle;align=center;strokeColor=#B3B3B3;" vertex="1" parent="4xPYINfr6F9CxKkX8cQ9-13">
+          <mxGeometry y="106" width="823" height="4" as="geometry" />
+        </mxCell>
+        <mxCell id="4xPYINfr6F9CxKkX8cQ9-16" value="alt" style="shape=umlFrame;dashed=1;pointerEvents=0;dropTarget=0;strokeColor=#B3B3B3;height=20;width=30" vertex="1" parent="1">
+          <mxGeometry x="543" y="503" width="843" height="744" as="geometry" />
+        </mxCell>
+        <mxCell id="4xPYINfr6F9CxKkX8cQ9-17" value="[Customer Too Young]" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;" vertex="1" parent="4xPYINfr6F9CxKkX8cQ9-16">
+          <mxGeometry x="30" width="813" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="4xPYINfr6F9CxKkX8cQ9-18" value="[Customer Meets Age Requirement]" style="shape=line;dashed=1;whiteSpace=wrap;verticalAlign=top;labelPosition=center;verticalLabelPosition=middle;align=center;strokeColor=#B3B3B3;" vertex="1" parent="4xPYINfr6F9CxKkX8cQ9-16">
+          <mxGeometry y="106" width="843" height="4" as="geometry" />
+        </mxCell>
+        <mxCell id="4xPYINfr6F9CxKkX8cQ9-19" value="POST /contracts (with JWT, CustomerID, VehicleID, Dates)" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" edge="1" parent="1" source="4xPYINfr6F9CxKkX8cQ9-1" target="4xPYINfr6F9CxKkX8cQ9-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="340" y="129" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4xPYINfr6F9CxKkX8cQ9-20" value="Validate JWT" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" edge="1" parent="1" source="4xPYINfr6F9CxKkX8cQ9-3" target="4xPYINfr6F9CxKkX8cQ9-5">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="696" y="183" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4xPYINfr6F9CxKkX8cQ9-21" value="Token Valid" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;dashPattern=2 3;endArrow=block;" edge="1" parent="1" source="4xPYINfr6F9CxKkX8cQ9-5" target="4xPYINfr6F9CxKkX8cQ9-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="697" y="237" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4xPYINfr6F9CxKkX8cQ9-22" value="Start Contract Creation" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" edge="1" parent="1" source="4xPYINfr6F9CxKkX8cQ9-3" target="4xPYINfr6F9CxKkX8cQ9-7">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="808" y="291" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4xPYINfr6F9CxKkX8cQ9-23" value="1. Get Customer Details (DOB)" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" edge="1" parent="1" source="4xPYINfr6F9CxKkX8cQ9-7" target="4xPYINfr6F9CxKkX8cQ9-12">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1310" y="345" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4xPYINfr6F9CxKkX8cQ9-24" value="Return Customer Data" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;dashPattern=2 3;endArrow=block;" edge="1" parent="1" source="4xPYINfr6F9CxKkX8cQ9-11" target="4xPYINfr6F9CxKkX8cQ9-7">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1311" y="399" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4xPYINfr6F9CxKkX8cQ9-25" value="2. Check Business Rule (Age)" style="curved=1;endArrow=block;rounded=0;" edge="1" parent="1" source="4xPYINfr6F9CxKkX8cQ9-7" target="4xPYINfr6F9CxKkX8cQ9-7">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1083" y="453" />
+              <mxPoint x="1083" y="483" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4xPYINfr6F9CxKkX8cQ9-26" value="Error: Customer too young" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;dashPattern=2 3;endArrow=block;" edge="1" parent="1" source="4xPYINfr6F9CxKkX8cQ9-7" target="4xPYINfr6F9CxKkX8cQ9-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="809" y="584" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4xPYINfr6F9CxKkX8cQ9-27" value="3. Get Vehicle Status" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" edge="1" parent="1" source="4xPYINfr6F9CxKkX8cQ9-7" target="4xPYINfr6F9CxKkX8cQ9-9">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1205" y="685" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4xPYINfr6F9CxKkX8cQ9-28" value="Return Status (&#39;available&#39; or &#39;on-loan&#39;)" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;dashPattern=2 3;endArrow=block;" edge="1" parent="1" source="4xPYINfr6F9CxKkX8cQ9-8" target="4xPYINfr6F9CxKkX8cQ9-7">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1206" y="739" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4xPYINfr6F9CxKkX8cQ9-29" value="4. Check Business Rule (Availability)" style="curved=1;endArrow=block;rounded=0;" edge="1" parent="1" source="4xPYINfr6F9CxKkX8cQ9-7" target="4xPYINfr6F9CxKkX8cQ9-7">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1083" y="793" />
+              <mxPoint x="1083" y="823" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4xPYINfr6F9CxKkX8cQ9-30" value="Error: Vehicle already in use" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;dashPattern=2 3;endArrow=block;" edge="1" parent="1" source="4xPYINfr6F9CxKkX8cQ9-7" target="4xPYINfr6F9CxKkX8cQ9-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="809" y="924" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4xPYINfr6F9CxKkX8cQ9-31" value="5. Persist New Contract Record" style="curved=1;endArrow=block;rounded=0;" edge="1" parent="1" source="4xPYINfr6F9CxKkX8cQ9-7" target="4xPYINfr6F9CxKkX8cQ9-7">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1083" y="1025" />
+              <mxPoint x="1083" y="1055" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4xPYINfr6F9CxKkX8cQ9-32" value="6. Update Vehicle Status to &#39;on-loan&#39;" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" edge="1" parent="1" source="4xPYINfr6F9CxKkX8cQ9-7" target="4xPYINfr6F9CxKkX8cQ9-10">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1205" y="1109" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4xPYINfr6F9CxKkX8cQ9-33" value="Vehicle Status Updated" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;dashPattern=2 3;endArrow=block;" edge="1" parent="1" source="4xPYINfr6F9CxKkX8cQ9-8" target="4xPYINfr6F9CxKkX8cQ9-7">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1206" y="1163" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4xPYINfr6F9CxKkX8cQ9-34" value="Success: Contract Created (Contract ID)" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;dashPattern=2 3;endArrow=block;" edge="1" parent="1" source="4xPYINfr6F9CxKkX8cQ9-7" target="4xPYINfr6F9CxKkX8cQ9-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="809" y="1217" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4xPYINfr6F9CxKkX8cQ9-35" value="Return Final HTTP Response" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;dashPattern=2 3;endArrow=block;" edge="1" parent="1" source="4xPYINfr6F9CxKkX8cQ9-3" target="4xPYINfr6F9CxKkX8cQ9-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="341" y="1291" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

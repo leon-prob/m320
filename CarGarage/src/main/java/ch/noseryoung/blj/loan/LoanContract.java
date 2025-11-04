@@ -8,6 +8,7 @@ import com.fasterxml.jackson.annotation.JsonIdentityReference;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Positive;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
@@ -61,4 +62,7 @@ public class LoanContract {
     @JoinColumn(name = "id_car_garage")
     @JsonIdentityReference(alwaysAsId = true)
     private CarGarage carGarage;
+
+     @Positive
+    private Double totalPrice;
 }

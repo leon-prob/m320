@@ -1,0 +1,95 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.17 Chrome/128.0.6613.36 Electron/32.0.1 Safari/537.36" version="24.7.17">
+  <diagram name="Page-1" id="F4cIiTEe6HqlF-Ck_c1d">
+    <mxGraphModel dx="1575" dy="827" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="q1eh-2UN9qMG7vrG6EeP-39" value="Frontend/Client" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;" vertex="1" parent="1">
+          <mxGeometry x="20" y="33" width="150" height="676" as="geometry" />
+        </mxCell>
+        <mxCell id="q1eh-2UN9qMG7vrG6EeP-40" value="CarGarage Backend (API)" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;" vertex="1" parent="1">
+          <mxGeometry x="400" y="33" width="196" height="676" as="geometry" />
+        </mxCell>
+        <mxCell id="q1eh-2UN9qMG7vrG6EeP-41" value="" style="points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0}" vertex="1" parent="q1eh-2UN9qMG7vrG6EeP-40">
+          <mxGeometry x="93" y="109" width="10" height="472" as="geometry" />
+        </mxCell>
+        <mxCell id="q1eh-2UN9qMG7vrG6EeP-42" value="Customer Service/DB" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;" vertex="1" parent="1">
+          <mxGeometry x="732" y="33" width="169" height="676" as="geometry" />
+        </mxCell>
+        <mxCell id="q1eh-2UN9qMG7vrG6EeP-43" value="" style="points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0}" vertex="1" parent="q1eh-2UN9qMG7vrG6EeP-42">
+          <mxGeometry x="79" y="163" width="10" height="162" as="geometry" />
+        </mxCell>
+        <mxCell id="q1eh-2UN9qMG7vrG6EeP-44" value="" style="points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0}" vertex="1" parent="q1eh-2UN9qMG7vrG6EeP-42">
+          <mxGeometry x="79" y="463" width="10" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="q1eh-2UN9qMG7vrG6EeP-45" value="1. POST /register (Email, Password, Details)" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" edge="1" parent="1" source="q1eh-2UN9qMG7vrG6EeP-39" target="q1eh-2UN9qMG7vrG6EeP-41">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="305" y="142" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="q1eh-2UN9qMG7vrG6EeP-46" value="2. Check if Email Already Exists" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" edge="1" parent="1" source="q1eh-2UN9qMG7vrG6EeP-41" target="q1eh-2UN9qMG7vrG6EeP-43">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="668" y="196" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="q1eh-2UN9qMG7vrG6EeP-47" value="3a. Return: Status &#39;EXISTS&#39;" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;dashPattern=2 3;endArrow=block;" edge="1" parent="1" source="q1eh-2UN9qMG7vrG6EeP-43" target="q1eh-2UN9qMG7vrG6EeP-41">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="669" y="250" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="q1eh-2UN9qMG7vrG6EeP-48" value="4a. 409 Conflict (End of Error Flow)" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;dashPattern=2 3;endArrow=block;" edge="1" parent="1" source="q1eh-2UN9qMG7vrG6EeP-41" target="q1eh-2UN9qMG7vrG6EeP-39">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="306" y="304" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="q1eh-2UN9qMG7vrG6EeP-49" value="3b. Return: Status &#39;UNIQUE&#39;" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;dashPattern=2 3;endArrow=block;" edge="1" parent="1" source="q1eh-2UN9qMG7vrG6EeP-43" target="q1eh-2UN9qMG7vrG6EeP-41">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="669" y="358" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="q1eh-2UN9qMG7vrG6EeP-50" value="4b. Hash Password (bcrypt)" style="curved=1;endArrow=block;rounded=0;" edge="1" parent="1" source="q1eh-2UN9qMG7vrG6EeP-41" target="q1eh-2UN9qMG7vrG6EeP-41">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="553" y="412" />
+              <mxPoint x="553" y="442" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="q1eh-2UN9qMG7vrG6EeP-51" value="5. Persist New Customer Record" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" edge="1" parent="1" source="q1eh-2UN9qMG7vrG6EeP-41" target="q1eh-2UN9qMG7vrG6EeP-44">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="668" y="496" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="q1eh-2UN9qMG7vrG6EeP-52" value="6. Customer ID Created" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;dashPattern=2 3;endArrow=block;" edge="1" parent="1" source="q1eh-2UN9qMG7vrG6EeP-44" target="q1eh-2UN9qMG7vrG6EeP-41">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="669" y="550" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="q1eh-2UN9qMG7vrG6EeP-53" value="7. 201 Created (Success Message)" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;dashPattern=2 3;endArrow=block;" edge="1" parent="1" source="q1eh-2UN9qMG7vrG6EeP-41" target="q1eh-2UN9qMG7vrG6EeP-39">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="306" y="604" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="q1eh-2UN9qMG7vrG6EeP-54" value="hypothetical" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="65" y="4" width="60" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -21,8 +21,9 @@ import java.util.List;
 @Table(schema="blj", name="car_garage")
 public class CarGarage {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY) // Changed to IDENTITY for Long IDs
-    private Long id; // Changed from UUID to Long
+    @Column(name="garage_id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     private String name;
 

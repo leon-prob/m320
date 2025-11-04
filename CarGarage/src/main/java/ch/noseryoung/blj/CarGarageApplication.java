@@ -8,7 +8,6 @@ import org.springframework.boot.autoconfigure.domain.EntityScan; // <--- Import 
 @EntityScan(basePackages = {
         "ch.noseryoung.blj.car",
         "ch.noseryoung.blj.garage",
-        "ch.noseryoung.blj.car.category",
         "ch.noseryoung.blj.loan",
         "ch.noseryoung.blj.login.user"
 })
